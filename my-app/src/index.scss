@@ -1,0 +1,19 @@
+@import '../src/components/header/header.scss';
+@import '../src/components/sections/sections.scss';
+@import '../src/components/player/player.scss';
+@import '../src/components/main-page/main.scss';
+@import '../src/components/main-page/list/list.scss';
+@import '../src/components/main-page/about/about.scss';
+@import '../src/components/main-page/button-play/button-play.scss';
+
+.flex-column {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.space-between {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

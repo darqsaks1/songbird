@@ -1,0 +1,17 @@
+.player-block {
+  margin-top: 10px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 3px solid red;
+  .bird-image {
+    width: 250px;
+    height: 200px;
+  }
+  .about-player {
+    width: 50%;
+    margin-left: 20px;
+  }
+}
