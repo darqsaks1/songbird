@@ -1,20 +1,27 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import List from './list/List'
 import About from './about/About'
 import ButtonPlay from './button-play/ButtonPlay'
 
-const Main = () => {
+const Main = (props) => {
+    const {
+        currentBird, setCurrentBird,
+    } = props;
     return (
         <div className='main-block'>
             <div className='space-between'>
-                <List />
-                <About  />
+                <List
+                    currentBird={currentBird}
+                />
+                <About />
             </div>
-            <ButtonPlay />
+            <ButtonPlay
+                currentBird={currentBird}
+                setCurrentBird={setCurrentBird}
+            />
         </div>
     );
 };
 
 
-  export default Main;
+export default Main;

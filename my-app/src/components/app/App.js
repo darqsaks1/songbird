@@ -3,9 +3,9 @@ import Header from '../header/Header'
 import Sections from '../sections/Sections'
 import Player from '../player/Player'
 import Main from '../main-page/Main'
+import mathRandom  from '../../data/formula'
 import './App.scss';
 
-const mathRandom = Math.floor(Math.random() * Math.floor(6))
 
 const App = () => {
   const [currentBird, setCurrentBird] = useState(mathRandom)
@@ -19,6 +19,7 @@ const App = () => {
       />
       <Main
         currentBird={currentBird}
+        setCurrentBird={setCurrentBird}
        
          />
     </div>
