@@ -28,3 +28,20 @@ export const setAboutBlock = (actionType) => {
   };
   return action;
 };
+
+
+export const setErrors = (actionType, data) => {
+  const action = {
+    type: actionType,
+    payload: data,
+  };
+  return action;
+};
+
+export const setLi = (actionType, data) => {
+  const action = {
+    type: actionType,
+    payload: data,
+  };
+  return action;
+};

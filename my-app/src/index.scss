@@ -1,19 +1,25 @@
-@import '../src/components/header/header.scss';
-@import '../src/components/sections/sections.scss';
-@import '../src/components/player/player.scss';
-@import '../src/components/main-page/main.scss';
-@import '../src/components/main-page/list/list.scss';
-@import '../src/components/main-page/about/about.scss';
-@import '../src/components/main-page/button-play/button-play.scss';
-@import './styles.scss';
+@import "../src/components/header/header.scss";
+@import "../src/components/sections/sections.scss";
+@import "../src/components/player/player.scss";
+@import "../src/components/main-page/main.scss";
+@import "../src/components/main-page/list/list.scss";
+@import "../src/components/main-page/about/about.scss";
+@import "../src/components/main-page/button-play/button-play.scss";
+@import "./styles.scss";
 .flex-column {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .space-between {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+
 }

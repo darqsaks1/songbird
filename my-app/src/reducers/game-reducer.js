@@ -5,6 +5,11 @@ import {
   HIDE_ABOUT,
   OPEN_ABOUT,
   OFF_GAME,
+  SET_ERRORS,
+  SET_SCORE,
+  SET_WIN,
+  SET_TO_WIN,
+  GET_SCORE
 } from '../actions/actions-types';
 
 const initialState = {
@@ -12,6 +17,10 @@ const initialState = {
   level: 0,
   bird: 4,
   about: true,
+  score: 0,
+  roundScore: 5,
+  errors: 0,
+  win: false,
 };
 
 const gameReducer = (state = initialState, action) => {
@@ -45,6 +54,26 @@ const gameReducer = (state = initialState, action) => {
     return {
       ...state,
       about: true,
+    };
+    case  GET_SCORE: 
+    return {
+      ...state,
+      score: action.payload,
+    };
+    case  SET_ERRORS: 
+    return {
+      ...state,
+      errors: action.payload,
+    };
+    case  SET_WIN: 
+    return {
+      ...state,
+      win: true,
+    };
+    case  SET_TO_WIN: 
+    return {
+      ...state,
+      win: false,
     };
     default:
       return state;

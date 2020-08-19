@@ -17,10 +17,7 @@ const Player = (props) => {
         <div className='player-block'>
             <img src=
                 {gameMode ? blackBird : birdsData[level][currentBird].image}
-                className='bird-image'
-                onClick={(e) =>
-                    dispatch(setLevel(UP_LEVEL, level === 5 ? 0 : level += 1))
-                } />
+                className='bird-image' />
             <div className='about-player flex-column'>
                 <div className='bird-name'> {gameMode ? '*****' : birdsData[level][currentBird].name}</div>
                 <div className='audio-player'>
