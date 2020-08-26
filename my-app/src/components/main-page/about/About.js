@@ -19,7 +19,7 @@ const About = () => {
     return (
         <div className='about-block'>
             <div className='flex-row'>
-                <img src={birdsData[level][bird].image} className='bird-image' />
+                <img src={birdsData[level][bird].image} className='bird-image' alt='birdimage' />
                 <div className='flex-column'>
                     <div> {birdsData[level][bird].name} </div>
                     <div> {birdsData[level][bird].species} </div>
@@ -31,7 +31,6 @@ const About = () => {
                         autoPlayAfterSrcChange={false}
                         src={birdsData[level][bird].audio}
                         showJumpControls={false}
-                        src={birdsData[level][bird].audio}
                     /></div>
                 </div>
             </div>

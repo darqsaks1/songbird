@@ -1,0 +1,157 @@
+.header-block {
+  padding: 5px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+.header-block .logo {
+  font-size: 50px;
+}
+.header-block .score {
+  font-size: 20px;
+}
+
+.section-block {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+.section-block div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-left: 1px solid black;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.player-block {
+  margin-top: 10px;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 3px solid red;
+}
+.player-block .bird-image {
+  width: 250px;
+  height: 200px;
+}
+.player-block .about-player {
+  width: 50%;
+  margin-left: 20px;
+}
+
+.react-audio .rhap_repeat-button {
+  display: none;
+}
+.react-audio .rhap_additional-controls {
+  display: none;
+}
+
+.rhap_container {
+  box-shadow: none !important;
+}
+
+.main-block {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 2px solid green;
+}
+
+.list-block {
+  width: 100%;
+  height: 200px;
+  border: 2px solid blue;
+  margin: 20px;
+}
+
+.point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: green;
+}
+
+.about-block {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  border: 1px solid orange;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-block .flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.about-block .flex-row .bird-image {
+  width: 200px;
+  height: 200px;
+}
+
+.button-play {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.game {
+  color: red;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  background-color: #222222;
+}

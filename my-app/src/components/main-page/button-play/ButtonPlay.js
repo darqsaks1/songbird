@@ -10,6 +10,7 @@ import {
     GAME_MODE,
     OPEN_ABOUT,
     SET_ERRORS,
+    SET_TO_NULL,
     SET_WIN,
 } from '../../../actions/actions-types'
 
@@ -19,7 +20,7 @@ const ButtonPlay = (props) => {
     let {
         currentBird, setCurrentBird
     } = props;
-    let score = useSelector(state => state.game.score);
+    useSelector(state => state.game.score);
     let level = useSelector(state => state.game.level);
     const gameMode = useSelector(state => state.game.gameMode);
     useSelector(state => state.game.about);
@@ -28,7 +29,8 @@ const ButtonPlay = (props) => {
         dispatch(setLevel(UP_LEVEL, level += 1))
         dispatch(setGameMode(GAME_MODE))
         dispatch(setGameMode(OPEN_ABOUT))
-        setCurrentBird(currentBird + mathRandom > 5 ?  1 : currentBird + mathRandom - 1)
+        dispatch(setGameMode(SET_TO_NULL))
+        setCurrentBird(currentBird + mathRandom > 5 ? 1 : currentBird + mathRandom - 1)
         dispatch(setLevel(SET_ERRORS, 0))
         if (level > 5) {
             dispatch(setGameMode(SET_WIN))

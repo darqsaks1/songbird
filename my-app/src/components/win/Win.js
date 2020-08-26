@@ -6,17 +6,15 @@ import {
 } from '../../actions/actions-creator'
 import {
     UP_LEVEL,
-    GAME_MODE,
-    OPEN_ABOUT,
     GET_SCORE,
-    SET_ERRORS,
+    
     SET_TO_WIN,
 } from '../../actions/actions-types'
 const Win = () => {
     const dispatch = useDispatch();
     const score = useSelector(state => state.game.score);
-    const gameMode = useSelector(state => state.game.gameMode);
-    const win = useSelector(state => state.game.win);
+   useSelector(state => state.game.gameMode);
+    useSelector(state => state.game.win);
     const setReloadButton = () => {
         dispatch(setLevel(UP_LEVEL, 0))
         dispatch(setLevel(GET_SCORE, 0))

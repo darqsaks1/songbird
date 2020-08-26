@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import List from './list/List'
 import About from './about/About'
 import ButtonPlay from './button-play/ButtonPlay'

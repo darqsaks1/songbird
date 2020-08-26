@@ -6,7 +6,6 @@ import {
   OPEN_ABOUT,
   OFF_GAME,
   SET_ERRORS,
-  SET_SCORE,
   SET_WIN,
   SET_TO_WIN,
   GET_SCORE

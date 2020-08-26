@@ -6,11 +6,10 @@ import Main from '../main-page/Main'
 import Win from '../win/Win'
 import mathRandom from '../../data/formula'
 import './App.scss';
-import { setGameMode } from '../../actions/actions-creator'
-import { useDispatch, useSelector } from 'react-redux';
-import { SET_WIN } from '../../actions/actions-types';
+import { useSelector } from 'react-redux';
+
 const App = () => {
-  let level = useSelector(state => state.game.level);
+  useSelector(state => state.game.level);
   const [currentBird, setCurrentBird] = useState(mathRandom)
   let win = useSelector(state => state.game.win);
   const setWinModal = () => {
@@ -18,7 +17,7 @@ const App = () => {
       return (<Win />);
     }
     return (
-      <div>
+      <div className='app_container'>
         <Player
           currentBird={currentBird}
           setCurrentBird={setCurrentBird}

@@ -1,13 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/src/styles.scss'
 import birdsData from '../../data/birds';
 import blackBird from '../../assets/images/blackBird.jpg'
-import { UP_LEVEL } from '../../actions/actions-types'
-import { setLevel } from '../../actions/actions-creator'
+
 const Player = (props) => {
-    const dispatch = useDispatch();
+    
     let level = useSelector(state => state.game.level);
     let gameMode = useSelector(state => state.game.gameMode);
     const {
@@ -17,7 +16,8 @@ const Player = (props) => {
         <div className='player-block'>
             <img src=
                 {gameMode ? blackBird : birdsData[level][currentBird].image}
-                className='bird-image' />
+                className='bird-image' 
+                alt='player'/>
             <div className='about-player flex-column'>
                 <div className='bird-name'> {gameMode ? '*****' : birdsData[level][currentBird].name}</div>
                 <div className='audio-player'>

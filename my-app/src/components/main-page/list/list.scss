@@ -1,28 +1,25 @@
 .list-block {
-    width: 100%;
-    height: 200px;
-    border: 2px solid blue;
-    margin: 20px;
+  width: 100%;
+  height: 200px;
+  border: 2px solid blue;
+  margin: 20px;
 }
 
 .point {
- 
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 20px;
-     
-       
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .black {
-    background-color: black; 
+  background-color: black;
 }
 
 .green {
-    background-color: green; 
+  background-color: green;
 }

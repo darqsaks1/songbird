@@ -1,7 +1,7 @@
 import React from 'react';
 import sections from '../../data/sections'
-import { useDispatch, useSelector } from 'react-redux';
-import birdsData from '../../data/birds';
+import {  useSelector } from 'react-redux';
+
 const Header = () => {
     let level = useSelector(state => state.game.level);
     return (
