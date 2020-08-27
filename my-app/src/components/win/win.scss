@@ -43,6 +43,12 @@ $pink-shadow: #ffe3e2;
      font-size: 25px;
    }
   }
+  .win-image {
+     @media (max-width:430px) {
+          width: 200px;
+          height: 200px;
+        }
+  }
   button {
     position: relative;
     display: inline-block;

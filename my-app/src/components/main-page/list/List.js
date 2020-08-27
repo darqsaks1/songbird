@@ -78,14 +78,14 @@ const List = (props) => {
                             if (currentBird === 0) {
                                 setTrueAnswer();
                                 if (game) {
-                                dispatch(setGameMode(SET_TO_1))
+                                    dispatch(setGameMode(SET_TO_1))
                                 }
                             }
 
                             else {
                                 setErrorAnswer();
                                 if (game) {
-                                dispatch(setGameMode(SET_TO_1_FALSE))
+                                    dispatch(setGameMode(SET_TO_1_FALSE))
                                 }
                             }
                             dispatch(setBirdNumber(GET_BIRD, 0));

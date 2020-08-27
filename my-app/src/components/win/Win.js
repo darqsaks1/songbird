@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import winGif from '../../assets/images/wingif.gif'
+import winAudio from '../../assets/audio/winaudio.mp3'
 import {
     setLevel,
     setGameMode
@@ -12,6 +13,7 @@ import {
     SET_TO_WIN,
 } from '../../actions/actions-types'
 const Win = () => {
+    const audioForWin = new Audio(winAudio)
     const dispatch = useDispatch();
     const score = useSelector(state => state.game.score);
     useSelector(state => state.game.gameMode);
@@ -22,6 +24,12 @@ const Win = () => {
         dispatch(setGameMode(SET_TO_WIN))
     }
 
+    const winModal = () => {
+        audioForWin.play();
+        return (
+            <img src={winGif} alt='win' className='win-image' />
+        )
+    }
 
     return (
         <div className='win-block'>
@@ -29,7 +37,7 @@ const Win = () => {
             <div>Вы прошли викторину и набрали {score} из 30 возможных вопросов!</div>
             <button className="learn-more" onClick={() => setReloadButton()}>Попробывать еще раз</button>
             <div>
-                {score >= 30 ? <img src={winGif} alt='win' /> : <div></div>}
+                {score >= 30 ? winModal() : <div></div>}
             </div>
         </div>
     );

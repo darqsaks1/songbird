@@ -15,10 +15,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   gameMode: true,
-  level: 5,
+  level: 0,
   bird: 4,
   about: true,
-  score: 30,
+  score: 0,
   roundScore: 5,
   errors: 0,
   win: false
