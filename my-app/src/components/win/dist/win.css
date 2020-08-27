@@ -18,12 +18,32 @@
   color: #19b5ca;
   font-family: "MyWebFont";
 }
+@media (max-width: 520px) {
+  .win-block {
+    font-size: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .win-block {
+    font-size: 15px;
+  }
+}
 .win-block h1 {
   font-size: 40px;
 }
 .win-block h1:after {
   color: white;
   content: "ВЛЯЕМ!";
+}
+@media (max-width: 520px) {
+  .win-block h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .win-block h1 {
+    font-size: 25px;
+  }
 }
 .win-block button {
   position: relative;

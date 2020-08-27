@@ -1,5 +1,6 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 .header-block {
-  padding: 5px;
   width: 100%;
   height: 60px;
   display: flex;
@@ -8,9 +9,26 @@
   color: #19b5ca;
   font-family: "MyWebFont";
 }
+@media (max-width: 600px) {
+  .header-block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .header-block .logo {
   font-size: 50px;
   letter-spacing: 2px;
+}
+@media (max-width: 712px) {
+  .header-block .logo {
+    font-size: 40px;
+  }
+}
+@media (max-width: 412px) {
+  .header-block .logo {
+    font-size: 35px;
+  }
 }
 .header-block .logo:after {
   content: "BIRD";
@@ -22,16 +40,25 @@
 }
 
 .section-block {
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 5px;
   width: 100%;
-  height: 30px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   color: #19b5ca;
   border-radius: 20px;
   font-family: "MyWebFont";
+  transition: 1s;
+}
+@media (max-width: 768px) {
+  .section-block {
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section-block div {
   width: 100%;
@@ -39,8 +66,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: #19b5ca;
   border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .section-block div {
+    margin-bottom: 5px;
+    font-size: 12px;
+    width: 50%;
+    min-height: 30px;
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 .red {
@@ -61,6 +99,15 @@
   justify-content: space-around;
   font-family: "MyWebFont";
 }
+@media (max-width: 1023px) {
+  .player-block {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 80px;
+  }
+}
 .player-block .bird-image {
   width: 250px;
   height: 200px;
@@ -68,9 +115,16 @@
   border-radius: 10px;
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
 }
-.player-block .about-player {
-  width: 500px;
-  margin-left: 20px;
+@media (max-width: 1023px) {
+  .player-block .bird-image {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .player-block .bird-image {
+    width: 220px;
+    height: 170px;
+  }
 }
 .player-block .about-player .bird-name {
   font-size: 50px;
@@ -79,9 +133,38 @@
   font-family: "MyWebFont";
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
 }
+@media (max-width: 662px) {
+  .player-block .about-player .bird-name {
+    font-size: 25px;
+    align-self: center;
+    width: 280px;
+  }
+}
+@media (max-width: 412px) {
+  .player-block .about-player .bird-name {
+    font-size: 20px;
+    align-self: center;
+    width: 220px;
+  }
+}
 .player-block .about-player .rhap_container {
   width: 500px;
   background-color: #222222;
+}
+@media (max-width: 662px) {
+  .player-block .about-player .rhap_container {
+    width: 400px;
+  }
+}
+@media (max-width: 490px) {
+  .player-block .about-player .rhap_container {
+    width: 300px;
+  }
+}
+@media (max-width: 380px) {
+  .player-block .about-player .rhap_container {
+    width: 250px;
+  }
 }
 .player-block .about-player .rhap_container .rhap_button-clear {
   color: #19b5ca;
@@ -91,6 +174,11 @@
 }
 .player-block .about-player .rhap_container .rhap_progress-indicator {
   background: #19b5ca;
+}
+@media (max-width: 480px) {
+  .player-block .about-player .rhap_container .player-block .about-player .rhap_container .rhap_time {
+    display: none;
+  }
 }
 
 .react-audio .rhap_repeat-button {
@@ -102,6 +190,12 @@
 
 .rhap_container {
   box-shadow: none !important;
+}
+
+@media (max-width: 480px) {
+  .player-block .about-player .rhap_container .rhap_time {
+    display: none;
+  }
 }
 
 .main-block {
@@ -123,6 +217,16 @@
   font-size: 30px;
   font-family: "MyWebFont";
   cursor: pointer;
+}
+@media (max-width: 1223px) {
+  .list-block ul {
+    font-size: 25px;
+  }
+}
+@media (max-width: 989px) {
+  .list-block ul {
+    font-size: 35px;
+  }
 }
 
 .point {
@@ -225,16 +329,85 @@
   align-self: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
 .win-block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 600px;
-  color: red;
-  background-color: black;
+  font-size: 25px;
+  color: #19b5ca;
+  font-family: "MyWebFont";
 }
+.win-block h1 {
+  font-size: 40px;
+}
+.win-block h1:after {
+  color: white;
+  content: "ВЛЯЕМ!";
+}
+.win-block button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+.win-block button.learn-more {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.win-block button.learn-more::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.win-block button.learn-more:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+.win-block button.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+.win-block button.learn-more:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+.win-block button.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -369,6 +542,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 989px) {
+  .space-between {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .flex-row {

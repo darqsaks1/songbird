@@ -2,6 +2,9 @@
   width: 100%;
   display:flex;
   align-items: center;
+  @media (max-width: 775px) {
+    margin-top: 20px;
+   }
 }
 .button-play {
   align-self: center;
@@ -23,6 +26,9 @@
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   transition: 1s;
+  @media (max-width: 380px) {
+    font-size: 15px;
+   }
 }
 
 #dont {

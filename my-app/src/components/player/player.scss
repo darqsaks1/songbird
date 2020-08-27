@@ -18,33 +18,60 @@
     height: 200px;
     border: 2px solid white;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+      1px 1px 5px rgba(255, 255, 255, 1);
     @media (max-width: 1023px) {
       margin-bottom: 20px;
     }
+    @media (max-width: 350px) {
+      width: 220px;
+      height: 170px;
+    }
   }
   .about-player {
-    width: 500px;
-    margin-left: 20px;
     .bird-name {
       font-size: 50px;
       text-align: center;
       color: white;
       font-family: "MyWebFont";
-      box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+      box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+        1px 1px 5px rgba(255, 255, 255, 1);
+      @media (max-width: 662px) {
+        font-size: 25px;
+        align-self: center;
+        width: 280px;
+      }
+      @media (max-width: 412px) {
+        font-size: 20px;
+        align-self: center;
+        width: 220px;
+      }
     }
     .rhap_container {
       width: 500px;
       background-color: #222222;
-      
+      @media (max-width: 662px) {
+        width: 400px;
+      }
+      @media (max-width: 490px) {
+        width: 300px;
+      }
+      @media (max-width: 380px) {
+        width: 250px;
+      }
       .rhap_button-clear {
         color: #19b5ca;
       }
       .rhap_time {
         color: #19b5ca;
       }
-      .rhap_progress-indicator{
+      .rhap_progress-indicator {
         background: #19b5ca;
+      }
+      .player-block .about-player .rhap_container .rhap_time {
+        @media (max-width: 480px) {
+          display: none;
+        }
       }
     }
   }
@@ -61,3 +88,10 @@
 .rhap_container {
   box-shadow: none !important;
 }
+
+.player-block .about-player .rhap_container .rhap_time {
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+

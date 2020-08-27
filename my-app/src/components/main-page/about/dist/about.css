@@ -10,10 +10,25 @@
   font-size: 20px;
   font-family: "MyWebFont";
 }
+@media (max-width: 802px) {
+  .about-block {
+    margin: 0px;
+  }
+}
+@media (max-width: 660px) {
+  .about-block {
+    font-size: 15px;
+  }
+}
 .about-block .flex-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+@media (max-width: 660px) {
+  .about-block .flex-row {
+    flex-direction: column;
+  }
 }
 .about-block .flex-row .bird-image {
   width: 180px;
@@ -27,12 +42,22 @@
   border-bottom: 1px solid #19b5ca;
   margin-right: 10px;
 }
+@media (max-width: 802px) {
+  .about-block .flex-row .flex-column .name {
+    margin-right: 0px;
+  }
+}
 .about-block .flex-row .flex-column .species {
   border-bottom: 1px solid #19b5ca;
 }
 .about-block .flex-row .flex-column .rhap_container {
   width: 320px;
   background-color: #222222;
+}
+@media (max-width: 400px) {
+  .about-block .flex-row .flex-column .rhap_container {
+    width: 230px;
+  }
 }
 .about-block .flex-row .flex-column .rhap_container .rhap_button-clear {
   color: #19b5ca;
@@ -56,4 +81,10 @@
   width: 200px;
   height: 200px;
   align-self: center;
+}
+
+@media (max-width: 400px) {
+  .about-block .flex-row .flex-column .rhap_container .rhap_time {
+    display: none;
+  }
 }

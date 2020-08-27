@@ -23,13 +23,25 @@ $pink-shadow: #ffe3e2;
   font-size: 25px;
   color: #19b5ca;
   font-family: "MyWebFont";
-
+  @media (max-width:520px) {
+     font-size: 20px;
+   }
+   @media (max-width:430px) {
+     font-size: 15px;
+   }
   h1 {
     font-size: 40px;
     &:after {
       color: white;
       content: "ВЛЯЕМ!";
+      
     }
+    @media (max-width:520px) {
+     font-size: 30px;
+   }
+   @media (max-width:430px) {
+     font-size: 25px;
+   }
   }
   button {
     position: relative;

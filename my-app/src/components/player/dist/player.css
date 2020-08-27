@@ -28,9 +28,11 @@
     margin-bottom: 20px;
   }
 }
-.player-block .about-player {
-  width: 500px;
-  margin-left: 20px;
+@media (max-width: 350px) {
+  .player-block .bird-image {
+    width: 220px;
+    height: 170px;
+  }
 }
 .player-block .about-player .bird-name {
   font-size: 50px;
@@ -39,9 +41,38 @@
   font-family: "MyWebFont";
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
 }
+@media (max-width: 662px) {
+  .player-block .about-player .bird-name {
+    font-size: 25px;
+    align-self: center;
+    width: 280px;
+  }
+}
+@media (max-width: 412px) {
+  .player-block .about-player .bird-name {
+    font-size: 20px;
+    align-self: center;
+    width: 220px;
+  }
+}
 .player-block .about-player .rhap_container {
   width: 500px;
   background-color: #222222;
+}
+@media (max-width: 662px) {
+  .player-block .about-player .rhap_container {
+    width: 400px;
+  }
+}
+@media (max-width: 490px) {
+  .player-block .about-player .rhap_container {
+    width: 300px;
+  }
+}
+@media (max-width: 380px) {
+  .player-block .about-player .rhap_container {
+    width: 250px;
+  }
 }
 .player-block .about-player .rhap_container .rhap_button-clear {
   color: #19b5ca;
@@ -51,6 +82,11 @@
 }
 .player-block .about-player .rhap_container .rhap_progress-indicator {
   background: #19b5ca;
+}
+@media (max-width: 480px) {
+  .player-block .about-player .rhap_container .player-block .about-player .rhap_container .rhap_time {
+    display: none;
+  }
 }
 
 .react-audio .rhap_repeat-button {
@@ -62,4 +98,10 @@
 
 .rhap_container {
   box-shadow: none !important;
+}
+
+@media (max-width: 480px) {
+  .player-block .about-player .rhap_container .rhap_time {
+    display: none;
+  }
 }
