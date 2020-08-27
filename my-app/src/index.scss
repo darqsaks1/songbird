@@ -4,8 +4,10 @@
 @import "../src/components/main-page/main.scss";
 @import "../src/components/main-page/list/list.scss";
 @import "../src/components/main-page/about/about.scss";
+@import '../src/components/win/win.scss';
 @import "../src/components/main-page/button-play/button-play.scss";
 @import "./styles.scss";
+
 .flex-column {
   display: flex;
   flex-direction: column;

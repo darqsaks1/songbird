@@ -3,7 +3,7 @@ import {  useSelector } from 'react-redux';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/src/styles.scss'
 import birdsData from '../../data/birds';
-import blackBird from '../../assets/images/blackBird.jpg'
+import blackBird from '../../assets/images/unknown.png'
 
 const Player = (props) => {
     

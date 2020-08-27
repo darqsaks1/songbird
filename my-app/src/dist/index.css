@@ -5,24 +5,33 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-bottom: 1px solid black;
+  color: #19b5ca;
+  font-family: "MyWebFont";
 }
 .header-block .logo {
   font-size: 50px;
+  letter-spacing: 2px;
+}
+.header-block .logo:after {
+  content: "BIRD";
+  color: white;
 }
 .header-block .score {
-  font-size: 20px;
+  color: white;
+  font-size: 30px;
 }
 
 .section-block {
   margin-top: 10px;
   padding: 5px;
   width: 100%;
-  height: 60px;
+  height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-bottom: 1px solid black;
+  color: #19b5ca;
+  border-radius: 20px;
+  font-family: "MyWebFont";
 }
 .section-block div {
   width: 100%;
@@ -30,16 +39,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: green;
-  border-left: 1px solid black;
+  background-color: #19b5ca;
+  border-radius: 5px;
 }
 
 .red {
-  color: red;
+  color: white;
+  font-weight: 100;
 }
 
 .yellow {
-  color: yellow;
+  color: black;
 }
 
 .player-block {
@@ -49,15 +59,38 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 3px solid red;
+  font-family: "MyWebFont";
 }
 .player-block .bird-image {
   width: 250px;
   height: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
 }
 .player-block .about-player {
-  width: 50%;
+  width: 500px;
   margin-left: 20px;
+}
+.player-block .about-player .bird-name {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: "MyWebFont";
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
+}
+.player-block .about-player .rhap_container {
+  width: 500px;
+  background-color: #222222;
+}
+.player-block .about-player .rhap_container .rhap_button-clear {
+  color: #19b5ca;
+}
+.player-block .about-player .rhap_container .rhap_time {
+  color: #19b5ca;
+}
+.player-block .about-player .rhap_container .rhap_progress-indicator {
+  background: #19b5ca;
 }
 
 .react-audio .rhap_repeat-button {
@@ -75,25 +108,30 @@
   width: 100%;
   height: auto;
   margin-top: 10px;
-  border: 2px solid green;
-}
-
-.list-block {
-  width: 100%;
-  height: 200px;
-  border: 2px solid blue;
-  margin: 20px;
-}
-
-.point {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
+  border-top: 2px solid white;
   border-radius: 20px;
 }
 
-.red {
-  background-color: red;
+.list-block {
+  width: 70%;
+  height: 200px;
+  margin: 20px;
+}
+.list-block ul {
+  color: white;
+  list-style-type: none;
+  font-size: 30px;
+  font-family: "MyWebFont";
+  cursor: pointer;
+}
+
+.point {
+  position: relative;
+  left: -20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
 }
 
 .black {
@@ -101,18 +139,43 @@
 }
 
 .green {
-  background-color: green;
+  background-color: #19b5ca;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: red;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
 }
 
 .about-block {
   width: 100%;
   height: auto;
-  min-height: 300px;
-  border: 1px solid orange;
+  min-height: 350px;
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: white;
+  font-size: 20px;
+  font-family: "MyWebFont";
 }
 .about-block .flex-row {
   display: flex;
@@ -120,21 +183,182 @@
   justify-content: space-around;
 }
 .about-block .flex-row .bird-image {
+  width: 180px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white;
+}
+.about-block .flex-row .flex-column .name {
+  font-size: 30px;
+  border-bottom: 1px solid #19b5ca;
+  margin-right: 10px;
+}
+.about-block .flex-row .flex-column .species {
+  border-bottom: 1px solid #19b5ca;
+}
+.about-block .flex-row .flex-column .rhap_container {
+  width: 320px;
+  background-color: #222222;
+}
+.about-block .flex-row .flex-column .rhap_container .rhap_button-clear {
+  color: #19b5ca;
+}
+.about-block .flex-row .flex-column .rhap_container .rhap_time {
+  color: #19b5ca;
+}
+.about-block .flex-row .flex-column .rhap_container .rhap_progress-indicator {
+  background: #19b5ca;
+}
+
+.about-block {
+  display: flex;
+}
+.about-block .bird-block {
+  align-self: center;
+  border-bottom: 1px solid white;
+  border-radius: 5px;
+}
+.about-block img {
   width: 200px;
   height: 200px;
+  align-self: center;
+}
+
+.win-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  color: red;
+  background-color: black;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .button-play {
-  width: 100%;
+  align-self: center;
+  left: 40px;
+  width: 60%;
   height: 40px;
-  background-color: black;
-  margin-top: 10px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 20px;
+  font-family: "MyWebFont";
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: 1s;
+}
+
+#dont {
+  color: black;
+  background: white;
+  transition: 1s;
+}
+
+.btn-3 {
+  background: #00acee;
+  background: linear-gradient(0deg, #00acee 0%, #027efb 100%);
+  width: 60%;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #027efb;
+  transition: all 0.3s ease;
+}
+
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-3:hover:before {
+  height: 100%;
+}
+
+.btn-3:hover:after {
+  width: 100%;
+}
+
+.btn-3 span:hover {
+  color: #027efb;
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #027efb;
+  transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3 span:hover:before {
+  height: 100%;
+}
+
+.btn-3 span:hover:after {
+  width: 100%;
 }
 
 .game {
   color: red;
 }
 
+@font-face {
+  font-family: "MyWebFont";
+  font-weight: bold;
+  src: url("./layouts/Peace Sans.otf");
+}
 .flex-column {
   display: flex;
   flex-direction: column;

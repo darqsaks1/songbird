@@ -1,4 +1,4 @@
-
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -15,10 +15,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   gameMode: true,
-  level: 0,
+  level: 5,
   bird: 4,
   about: true,
-  score: 0,
+  score: 30,
   roundScore: 5,
   errors: 0,
   win: false

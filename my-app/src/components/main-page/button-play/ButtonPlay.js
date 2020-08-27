@@ -40,16 +40,20 @@ const ButtonPlay = (props) => {
     const renderButtonPlay = () => {
         if (gameMode) {
             return (
-                <button className='button-play'>
-                    <div className='game'>game</div>
-                </button>
+                <div class='container'>
+                    <button className='button-play custom-btn btn-3 ' id ='dont'>
+                        <span>Угадайте</span>
+                    </button>
+                </div>
             );
         }
 
         return (
-            <button className='button-play' onClick={() => setPlayButton()} >
-                <div className='game'> NOT GAME </div>
-            </button>
+            <div class='container'>
+                <button className='button-play custom-btn btn-3' onClick={() => setPlayButton()} >
+                    <span>Играть дальше</span>
+                </button>
+            </div>
         );
     }
 

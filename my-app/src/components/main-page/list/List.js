@@ -63,7 +63,7 @@ const List = (props) => {
             return 'point green'
         }
         if (state === false) {
-            return 'point red'
+            return 'point close'
         }
         return 'point black'
     }
@@ -77,18 +77,22 @@ const List = (props) => {
                         onClick={() => {
                             if (currentBird === 0) {
                                 setTrueAnswer();
+                                if (game) {
                                 dispatch(setGameMode(SET_TO_1))
+                                }
                             }
 
                             else {
                                 setErrorAnswer();
+                                if (game) {
                                 dispatch(setGameMode(SET_TO_1_FALSE))
+                                }
                             }
                             dispatch(setBirdNumber(GET_BIRD, 0));
                         }}>
                         <div />
                         <div>
-                            <div className={setPointColor(li_first)}></div> 
+                            <div className={setPointColor(li_first)}></div>
                             {birdsData[level][0].name}
                         </div>
                     </div>
@@ -109,7 +113,7 @@ const List = (props) => {
                         }
                         dispatch(setBirdNumber(GET_BIRD, 1));
                     }}>
-                        <div className={setPointColor(li_second)}></div> 
+                        <div className={setPointColor(li_second)}></div>
                         {birdsData[level][1].name}
                     </div>
                 </li>
@@ -130,8 +134,8 @@ const List = (props) => {
                         }
                         dispatch(setBirdNumber(GET_BIRD, 2));
                     }}>
-                        <div className={setPointColor(li_third)}></div> 
-                         {birdsData[level][2].name}
+                        <div className={setPointColor(li_third)}></div>
+                        {birdsData[level][2].name}
                     </div>
                 </li>
                 <li  >
@@ -152,7 +156,7 @@ const List = (props) => {
                         dispatch(setBirdNumber(GET_BIRD, 3));
                     }}>
                         <div className={setPointColor(li_four)}></div>
-                         {birdsData[level][3].name}
+                        {birdsData[level][3].name}
                     </div>
                 </li>
                 <li  >

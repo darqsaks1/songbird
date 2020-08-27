@@ -13,10 +13,10 @@ import {
 
 const initialState = {
   gameMode: true,
-  level: 0,
+  level: 5,
   bird: 4,
   about: true,
-  score: 0,
+  score: 30,
   roundScore: 5,
   errors: 0,
   win: false,
