@@ -4,7 +4,7 @@ import About from './about/About'
 import ButtonPlay from './button-play/ButtonPlay'
 
 const Main = (props) => {
-   
+
     const {
         currentBird, setCurrentBird,
     } = props;
@@ -12,7 +12,7 @@ const Main = (props) => {
         <div className='main-block'>
             <div className='space-between'>
                 <List
-                    currentBird={currentBird}  
+                    currentBird={currentBird}
                 />
                 <About />
             </div>

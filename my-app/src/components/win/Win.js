@@ -34,7 +34,7 @@ const Win = () => {
     return (
         <div className='win-block'>
             <h1>ПОЗДРА</h1>
-            <div>Вы прошли викторину и набрали {score} из 30 возможных вопросов!</div>
+            <div>{score >= 30 ? 'Не, ну настоящий отец. Набрал 30+. По максам, братан':`Вы прошли викторину и набрали ${score} из 30 возможных вопросов!`}</div>
             <button className="learn-more" onClick={() => setReloadButton()}>Попробывать еще раз</button>
             <div>
                 {score >= 30 ? winModal() : <div></div>}
