@@ -1,3 +1,5 @@
-const mathRandom = Math.floor(Math.random() * Math.floor(6))
+const mathRandom = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
 export default mathRandom;

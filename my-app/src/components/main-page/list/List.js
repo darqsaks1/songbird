@@ -8,6 +8,7 @@ import {
     SET_TO_4,
     SET_TO_5,
     SET_TO_6,
+    SET_AUDIO,
     SET_TO_1_FALSE,
     SET_TO_2_FALSE,
     SET_TO_3_FALSE,
@@ -19,11 +20,11 @@ import { setBirdNumber, setAboutBlock, setGameMode } from '../../../actions/acti
 import { useDispatch, useSelector } from 'react-redux';
 import audioCorrect from '../../../assets/audio/correct.mp3'
 import audioError from '../../../assets/audio/error.mp3'
+
 const List = (props) => {
     const {
         currentBird,
     } = props;
-
     const dispatch = useDispatch();
     const currectAudio = new Audio(audioCorrect);
     const errorAudio = new Audio(audioError)
@@ -46,6 +47,7 @@ const List = (props) => {
     const setTrueAnswer = () => {
         dispatch(setGameMode(OFF_GAME))
         if (game) {
+            dispatch(setGameMode(SET_AUDIO))
             currectAudio.play()
             dispatch(setBirdNumber(GET_SCORE, score + (errors > roundScore ? 0 : roundScore - errors)))
         }
@@ -54,7 +56,6 @@ const List = (props) => {
         if (game) {
             dispatch(setBirdNumber(SET_ERRORS, errors += 1))
             errorAudio.play()
-
         }
     }
 
@@ -83,13 +84,17 @@ const List = (props) => {
                             }
 
                             else {
-                                setErrorAnswer();
                                 if (game) {
                                     dispatch(setGameMode(SET_TO_1_FALSE))
                                 }
+                                if (li_first !== false) {
+
+                                    setErrorAnswer();
+                                }
                             }
                             dispatch(setBirdNumber(GET_BIRD, 0));
-                        }}>
+                        }
+                        }>
                         <div />
                         <div>
                             <div className={setPointColor(li_first)}></div>
@@ -106,9 +111,11 @@ const List = (props) => {
                             }
                         }
                         else {
-                            setErrorAnswer();
                             if (game) {
                                 dispatch(setGameMode(SET_TO_2_FALSE))
+                            }
+                            if (li_second !== false) {
+                                setErrorAnswer();
                             }
                         }
                         dispatch(setBirdNumber(GET_BIRD, 1));
@@ -127,9 +134,11 @@ const List = (props) => {
                         }
 
                         else {
-                            setErrorAnswer();
                             if (game) {
                                 dispatch(setGameMode(SET_TO_3_FALSE))
+                            }
+                            if (li_third !== false) {
+                                setErrorAnswer();
                             }
                         }
                         dispatch(setBirdNumber(GET_BIRD, 2));
@@ -148,9 +157,11 @@ const List = (props) => {
                         }
 
                         else {
-                            setErrorAnswer();
                             if (game) {
                                 dispatch(setGameMode(SET_TO_4_FALSE))
+                            }
+                            if (li_four !== false) {
+                                setErrorAnswer();
                             }
                         }
                         dispatch(setBirdNumber(GET_BIRD, 3));
@@ -169,9 +180,11 @@ const List = (props) => {
                         }
 
                         else {
-                            setErrorAnswer();
                             if (game) {
                                 dispatch(setGameMode(SET_TO_5_FALSE))
+                            }
+                            if (li_five !== false) {
+                                setErrorAnswer();
                             }
                         }
                         dispatch(setBirdNumber(GET_BIRD, 4));
@@ -190,9 +203,11 @@ const List = (props) => {
                         }
 
                         else {
-                            setErrorAnswer();
                             if (game) {
                                 dispatch(setGameMode(SET_TO_6_FALSE))
+                            }
+                            if (li_six !== false) {
+                                setErrorAnswer();
                             }
                         }
                         dispatch(setBirdNumber(GET_BIRD, 5));

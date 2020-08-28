@@ -17,6 +17,7 @@
 .header-block .logo {
   font-size: 50px;
   letter-spacing: 2px;
+  user-select: none;
 }
 @media (max-width: 712px) {
   .header-block .logo {

@@ -21,7 +21,8 @@ var initialState = {
   score: 0,
   roundScore: 5,
   errors: 0,
-  win: false
+  win: false,
+  audio: false
 };
 
 var gameReducer = function gameReducer() {
@@ -77,6 +78,16 @@ var gameReducer = function gameReducer() {
     case _actionsTypes.SET_TO_WIN:
       return _objectSpread({}, state, {
         win: false
+      });
+
+    case _actionsTypes.SET_AUDIO:
+      return _objectSpread({}, state, {
+        audio: true
+      });
+
+    case _actionsTypes.SET_AUDIO_TO_FALSE:
+      return _objectSpread({}, state, {
+        audio: false
       });
 
     default:

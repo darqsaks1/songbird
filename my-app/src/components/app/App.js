@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 const App = () => {
   useSelector(state => state.game.level);
-  const [currentBird, setCurrentBird] = useState(mathRandom)
+  const [currentBird, setCurrentBird] = useState(mathRandom(5))
   let win = useSelector(state => state.game.win);
   const setWinModal = () => {
     if (win === true) {

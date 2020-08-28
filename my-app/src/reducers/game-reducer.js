@@ -8,7 +8,9 @@ import {
   SET_ERRORS,
   SET_WIN,
   SET_TO_WIN,
-  GET_SCORE
+  SET_AUDIO,
+  GET_SCORE,
+  SET_AUDIO_TO_FALSE,
 } from '../actions/actions-types';
 
 const initialState = {
@@ -20,6 +22,7 @@ const initialState = {
   roundScore: 5,
   errors: 0,
   win: false,
+  audio: false,
 };
 
 const gameReducer = (state = initialState, action) => {
@@ -73,6 +76,16 @@ const gameReducer = (state = initialState, action) => {
     return {
       ...state,
       win: false,
+    };
+    case  SET_AUDIO: 
+    return {
+      ...state,
+      audio: true,
+    };
+    case  SET_AUDIO_TO_FALSE: 
+    return {
+      ...state,
+      audio: false,
     };
     default:
       return state;

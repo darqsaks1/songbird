@@ -12,25 +12,26 @@ import {
     SET_ERRORS,
     SET_TO_NULL,
     SET_WIN,
+    SET_AUDIO_TO_FALSE,
 } from '../../../actions/actions-types'
 
 const ButtonPlay = (props) => {
 
     const dispatch = useDispatch();
     let {
-        currentBird, setCurrentBird
+        setCurrentBird
     } = props;
     useSelector(state => state.game.score);
     let level = useSelector(state => state.game.level);
     const gameMode = useSelector(state => state.game.gameMode);
     useSelector(state => state.game.about);
-
     const setPlayButton = () => {
         dispatch(setLevel(UP_LEVEL, level += 1))
         dispatch(setGameMode(GAME_MODE))
         dispatch(setGameMode(OPEN_ABOUT))
         dispatch(setGameMode(SET_TO_NULL))
-        setCurrentBird(currentBird + mathRandom > 5 ? 1 : currentBird + mathRandom - 1)
+        dispatch(setGameMode(SET_AUDIO_TO_FALSE))
+        setCurrentBird(mathRandom(5))
         dispatch(setLevel(SET_ERRORS, 0))
         if (level > 5) {
             dispatch(setGameMode(SET_WIN))
@@ -41,7 +42,7 @@ const ButtonPlay = (props) => {
         if (gameMode) {
             return (
                 <div class='container'>
-                    <button className='button-play custom-btn btn-3 ' id ='dont'>
+                    <button className='button-play custom-btn btn-3 ' id='dont'>
                         <span>Угадайте</span>
                     </button>
                 </div>
@@ -56,7 +57,6 @@ const ButtonPlay = (props) => {
             </div>
         );
     }
-
 
     return (
         <div>
