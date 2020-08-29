@@ -1,0 +1,68 @@
+.list-block {
+  display: flex;
+  width: 70%;
+  min-height: 200px;
+  height: auto;
+  margin: 20px;
+  align-items: center;
+  @media (max-width: 989px) {
+    width: 100%;
+    margin: 0px;
+  }
+  ul {
+    align-self: center;
+    color: white;
+    list-style-type: none;
+    font-size: 30px;
+    font-family: "MyWebFont";
+    cursor: pointer;
+    @media (max-width: 1223px) {
+      font-size: 25px;
+    }
+    @media (max-width: 989px) {
+      font-size: 35px;
+    }
+    @media (max-width: 420px) {
+      font-size: 25px;
+    }
+  }
+}
+
+.point {
+  position: relative;
+  left: -20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+
+.black {
+  background-color: black;
+}
+
+.green {
+  background-color: #19b5ca;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: red;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}

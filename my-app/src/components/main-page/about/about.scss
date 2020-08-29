@@ -1,0 +1,83 @@
+.about-block {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+  font-family: "MyWebFont";
+  @media (max-width: 802px) {
+    margin: 0px;
+  }
+  @media (max-width: 660px) {
+    font-size: 15px;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @media (max-width: 660px) {
+      flex-direction:  column
+    }
+    .bird-image {
+      width: 180px;
+      height: 150px;
+      border: 2px solid white;
+      border-radius: 10px;
+
+      box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+        1px 1px 5px rgba(255, 255, 255, 1);
+    }
+    .flex-column {
+      .name {
+        font-size: 30px;
+        border-bottom: 1px solid #19b5ca;
+        margin-right: 10px;
+        @media (max-width: 802px) {
+          margin-right: 0px;
+        }
+      }
+      .species {
+        border-bottom: 1px solid #19b5ca;
+      }
+      .rhap_container {
+        width: 320px;
+        background-color: #222222;
+        @media (max-width: 400px) {
+         width: 230px
+        }
+        .rhap_button-clear {
+          color: #19b5ca;
+        }
+        .rhap_time {
+          color: #19b5ca;
+        }
+        .rhap_progress-indicator {
+          background: #19b5ca;
+        }
+      }
+    }
+  }
+}
+.about-block {
+  display: flex;
+  .bird-block {
+    align-self: center;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }
+}
+
+.about-block .flex-row .flex-column .rhap_container .rhap_time {
+  @media (max-width: 400px) {
+    display: none;
+   }
+}
